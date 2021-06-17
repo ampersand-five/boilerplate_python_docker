@@ -25,8 +25,10 @@ def init_logger() -> Logger:
 
     return logger
 
+
 # Setup global logger
 LOGGER = init_logger()
+
 
 def main(argv: list[str]) -> None:
     '''Main. Reads in from command line, outputs.

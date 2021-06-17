@@ -6,7 +6,6 @@ like:
 - Poetry
 - Dockerfile that will do a basic build and run
 - Makefile for quick commands
-- Good app folder structure
 
 ### Build Docker container locally
 Make command to build:
@@ -17,3 +16,10 @@ Make command to build:
 Make command that will build and run:
 
 `make run`
+
+
+## To Do
+- Add pre-commit
+- Add black -- add this when done: [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+- Add add pytest structure
+- Lucid chart and link
