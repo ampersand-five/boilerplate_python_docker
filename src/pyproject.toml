@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "WordRemoveAndCount"
+name = "BoilerplatePythonDocker"
 version = "1.0.0"
-description = "\"Removes words given, from a source, and then does a word count on remaining words.\""
+description = "Boilerplate code to copy and get a repo started from"
 authors = ["X"]
 
 [tool.poetry.dependencies]

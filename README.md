@@ -1,8 +1,19 @@
-# Demo Project: Word Filter and Count
-## Removes words given, from a source, and then does a word count on remaining words.
+# Boilerplate code to copy and get a repo started from
+Includes working build of python 3.9 in a Docker image and basic extras 
+like:
+- Global logging setup in a useful format
+- Outline for reading in command line arguments already setup
+- Poetry
+- Dockerfile that will do a basic build and run
+- Makefile for quick commands
+- Good app folder structure
 
 ### Build Docker container locally
-`docker build -t word_filter_and_count:latest .`
+Make command to build:
+
+`make build`
 
 ### Run Docker container locally
-`docker run --rm word_filter_and_count:latest`
+Make command that will build and run:
+
+`make run`
