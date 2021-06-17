@@ -1,12 +1,13 @@
 FROM python:3.9
 
-# Install pipx
-RUN pip install pipx
+ENV POETRY_VERSION==1.1.6
 
 # Install poetry
-RUN pipx install poetry
+RUN pip install "poetry==$POETRY_VERSION"
 
-# Copy pyproject and lock file so that it doesn't have to lock again
+# We want to cache our requirements and only reinstall them when pyproject.toml or poetry.lock files
+#   change. Otherwise builds will be slow. After the poetry is installed, but before any other files 
+#   are added. https://stackoverflow.com/questions/53835198/integrating-python-poetry-with-docker
 COPY src/poetry.lock src/pyproject.toml /src/ 
 
 # Set working directory inside docker container

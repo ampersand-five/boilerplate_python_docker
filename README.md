@@ -5,4 +5,4 @@
 `docker build -t word_filter_and_count:latest .`
 
 ### Run Docker container locally
-`docker run --rm`
+`docker run --rm word_filter_and_count:latest`
