@@ -17,6 +17,11 @@ like:
 - Add any assumptions made
 
 ## Running The Code
+- Setup using Poetry and pyenv. You will want to have a .python-version file. Run
+    `pyenv local 3.9.13`, with a version allowed by the pyproject.toml file.
+    - Also make sure to tell Poetry to use the correct python version as well with:
+        `poetry env use 3.9.13`.
+
 ### Supported Flags
 - h - Help
 - d - Output debug logs
