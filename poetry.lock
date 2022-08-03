@@ -8,8 +8,8 @@ python-versions = ">=3.4"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "aefad9ebf6645644ef32c1fc3b5effa9eb9ee9a210f342b9bcdc8761d23526b4"
+python-versions = "~3.9"
+content-hash = "d3851468681fcefaf94e9b105010562448e7d5b91454b50813f5f22a67e98739"
 
 [metadata.files]
 python-json-logger = [
