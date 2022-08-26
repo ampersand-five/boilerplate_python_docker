@@ -1,14 +1,15 @@
 FROM python:3.9
 
-ENV POETRY_VERSION==1.1.6
+ENV POETRY_VERSION==1.1.14
 
 # Install poetry
-RUN pip install "poetry==$POETRY_VERSION"
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
 # We want to cache our requirements and only reinstall them when pyproject.toml or poetry.lock files
 #   change. Otherwise builds will be slow. After the poetry is installed, but before any other files 
-#   are added. https://stackoverflow.com/questions/53835198/integrating-python-poetry-with-docker
-COPY src/poetry.lock src/pyproject.toml /src/ 
+#   are added, copy the pyproject.toml and poetry.lock file to the docker container.
+#   See: https://stackoverflow.com/questions/53835198/integrating-python-poetry-with-docker
+COPY poetry.lock pyproject.toml /src/ 
 
 # Set working directory inside docker container
 WORKDIR /src
